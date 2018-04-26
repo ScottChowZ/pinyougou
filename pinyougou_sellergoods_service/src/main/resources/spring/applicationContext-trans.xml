@@ -32,7 +32,7 @@
     <!-- 切面 -->
     <aop:config>
         <aop:advisor advice-ref="txAdvice"
-                     pointcut="execution(* com.scott.service.*.*(..))" />
+                     pointcut="execution(* com.scott.sellergoods.service.*.*(..))" />
     </aop:config>
 
 </beans>

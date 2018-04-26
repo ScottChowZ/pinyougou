@@ -1,0 +1,1 @@
+var app=angular.module("pinyougou",['pagination'])//用到分页插件模块

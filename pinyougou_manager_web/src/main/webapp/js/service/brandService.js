@@ -21,4 +21,8 @@ app.service("brandService",function ($http) {
 
         return  $http.post('../brand/findAll.do')
     }
+    this.selectOptionList=function(){
+        return $http.get('../brand/selectOptionList.do');
+    }
+
 })

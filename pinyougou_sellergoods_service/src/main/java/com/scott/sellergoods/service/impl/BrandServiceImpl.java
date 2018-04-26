@@ -1,7 +1,6 @@
 package com.scott.sellergoods.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.scott.mapper.TbBrandMapper;
@@ -9,10 +8,10 @@ import com.scott.pojo.TbBrand;
 import com.scott.pojo.TbBrandExample;
 import com.scott.serllergoods.service.BrandService;
 import entity.PageResult;
-import entity.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author scott
@@ -88,4 +87,10 @@ public  PageResult search(TbBrand tbBrand,int pageNum, int pageSize){
     pageResult.setTotal(page.getTotal());//总数
     return pageResult;
 }
+
+    @Override
+    public List<Map> selectOptionList() {
+
+      return   tbBrandMapper.selectOptionList();
+    }
 }

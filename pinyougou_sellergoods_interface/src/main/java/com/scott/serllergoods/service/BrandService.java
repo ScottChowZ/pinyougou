@@ -2,9 +2,9 @@ package com.scott.serllergoods.service;
 
 import com.scott.pojo.TbBrand;
 import entity.PageResult;
-import entity.Result;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author scott
@@ -20,4 +20,6 @@ public interface BrandService {
     public void update(TbBrand tbBrand);
     public  void deleteBrand(Long[] ids);
     public PageResult search(TbBrand tbBrand,int pageNum,int pageSize);
+
+    List<Map> selectOptionList();
 }

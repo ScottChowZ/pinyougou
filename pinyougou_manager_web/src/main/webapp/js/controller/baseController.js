@@ -25,5 +25,19 @@ app.controller("baseController",function ($scope) {
         }
 
     }
+    //提取json字符串数据中某个属性，返回拼接字符串 逗号分隔[{"id":1,"text":"联想"},{"id":3,"text":"三星"},{"id":7,"text":"中兴"}]
+    $scope.jsonToString=function(jsonString,key){
+        var json=JSON.parse(jsonString);//将json字符串转换为json数组
+
+        var value="";
+        for(var i=0;i<json.length;i++){
+            if(i>0){
+                value+=","
+            }
+            value+=json[i][key];//根据key获得值并拼接  联想,三星,中兴
+        }
+        return value;
+    }
+
 
 })

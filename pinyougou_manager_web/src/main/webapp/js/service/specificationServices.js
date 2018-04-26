@@ -11,5 +11,8 @@ app.service("specificationService",function ($http) {
    this.delete=function(selectIds){
        return $http.post('../specification/delete.do?ids='+selectIds)
    }
+    this.selectOptionList=function () {
+        return $http.post('../specification/selectOptionList.do');
+    }
 
-})
+    })

@@ -1,17 +1,15 @@
 package com.scott.sellergoods.service.impl;
-import java.util.List;
-
-import com.scott.pojo.TbTypeTemplateExample;
-import com.scott.serllergoods.service.TypeTemplateService;
-import org.springframework.beans.factory.annotation.Autowired;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.scott.mapper.TbTypeTemplateMapper;
 import com.scott.pojo.TbTypeTemplate;
-
-
+import com.scott.pojo.TbTypeTemplateExample;
+import com.scott.serllergoods.service.TypeTemplateService;
 import entity.PageResult;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
  * 服务实现层
@@ -47,7 +45,8 @@ public class TypeTemplateServiceImpl implements TypeTemplateService {
 	 */
 	@Override
 	public void add(TbTypeTemplate typeTemplate) {
-		typeTemplateMapper.insert(typeTemplate);		
+
+		typeTemplateMapper.insert(typeTemplate);
 	}
 
 	

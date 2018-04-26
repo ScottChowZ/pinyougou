@@ -103,6 +103,7 @@
                 <configuration>
                     <path>/</path>
                     <port>9001</port>
+                    <uriEncoding>utf-8</uriEncoding>
                 </configuration>
             </plugin>
         </plugins>

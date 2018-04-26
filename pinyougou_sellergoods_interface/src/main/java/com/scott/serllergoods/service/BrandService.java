@@ -1,6 +1,8 @@
 package com.scott.serllergoods.service;
 
 import com.scott.pojo.TbBrand;
+import entity.PageResult;
+import entity.Result;
 
 import java.util.List;
 
@@ -12,4 +14,10 @@ import java.util.List;
  */
 public interface BrandService {
     public List<TbBrand> findAll();
+    public PageResult findPage(int pageNum,int pageSize);
+    public void saveBrand(TbBrand tbBrand);
+    public TbBrand findById(Long id);
+    public void update(TbBrand tbBrand);
+    public  void deleteBrand(Long[] ids);
+    public PageResult search(TbBrand tbBrand,int pageNum,int pageSize);
 }

@@ -44,13 +44,14 @@ public class TbBrandExample {
         return criteria;
     }
 
-    public Criteria createCriteria() {
+    public Criteria createCriteria() {//创建离线对象
         Criteria criteria = createCriteriaInternal();
         if (oredCriteria.size() == 0) {
-            oredCriteria.add(criteria);
+            oredCriteria.add(criteria);//放入集合
         }
         return criteria;
     }
+
 
     protected Criteria createCriteriaInternal() {
         Criteria criteria = new Criteria();
@@ -63,6 +64,8 @@ public class TbBrandExample {
         distinct = false;
     }
 
+
+    //GeneratedCriteria类
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
 
@@ -305,6 +308,7 @@ public class TbBrandExample {
         }
     }
 
+    //Criteria类
     public static class Criteria extends GeneratedCriteria {
 
         protected Criteria() {
